@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Admin Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+    #loginForm {
+  border: 1px solid whitesmoke; /* black border, 2px thickness */
+  padding: 20px;          /* optional: add padding inside the form */
+  border-radius: 6px;     /* optional: rounded corners */
+  height: 100%;
+}
+body{
+    background-color: #011c75;
+}
+</style>
+<body class="d-flex justify-content-center align-items-center vh-100">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+             
+            <h3 class="text-center text-white mb-4"> Student Performance Predictor </h3>
+            {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+            {% endif %}
+            <form method="POST" id="loginForm">
+                <div class="mb-3">
+                    <label class="form-label text-white">Username</label>
+                    <input type="text" name="username" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-white">Password</label>
+                    <input type="password" name="password" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
