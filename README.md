@@ -110,4 +110,3 @@ To run the unit tests:
   Install `python-dotenv` if not installed or manually export variables in your shell.
 
 ## Project Structure
-
